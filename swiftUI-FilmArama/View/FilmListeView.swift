@@ -10,13 +10,19 @@ import SwiftUI
 struct FilmListeView: View {
     
    @ObservedObject var filmListeViewModel : FilmListeViewModel
+    @State var aranacakFilm = ""
+    
      init(){
          self.filmListeViewModel = FilmListeViewModel()
-         self.filmListeViewModel.filmAramasiYap(filmIsmi: "titanic")
+        
     }
     
     var body: some View {
         NavigationView{
+            VStack{
+            TextField("Aranacak Film ", text: $aranacakFilm) {
+                self.filmListeViewModel.filmAramasiYap(filmIsmi: aranacakFilm)
+            }.padding().textFieldStyle(RoundedBorderTextFieldStyle())
         List(filmListeViewModel.filmler, id: \.imdbId){
             film in HStack{
                 OzelImage(url: film.poster).frame(width: 90, height: 130)
@@ -26,6 +32,8 @@ struct FilmListeView: View {
                 }
             }
         }.navigationTitle(Text("Film Kitabı"))
+                
+            }
     
         }
     }
