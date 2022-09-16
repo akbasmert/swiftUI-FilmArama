@@ -12,16 +12,23 @@ struct FilmListeView: View {
    @ObservedObject var filmListeViewModel : FilmListeViewModel
      init(){
          self.filmListeViewModel = FilmListeViewModel()
-         self.filmListeViewModel.filmAramasiYap(filmIsmi: "pulp")
+         self.filmListeViewModel.filmAramasiYap(filmIsmi: "titanic")
     }
     
     var body: some View {
+        NavigationView{
         List(filmListeViewModel.filmler, id: \.imdbId){
-            film in Text(film.title)
+            film in HStack{
+                OzelImage(url: film.poster).frame(width: 90, height: 130)
+                VStack(alignment:.leading) {
+                    Text(film.title).font(.title3).foregroundColor(.blue)
+                    Text(film.year).foregroundColor(.orange)
+                }
+            }
+        }.navigationTitle(Text("Film Kitabı"))
+    
         }
-    
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

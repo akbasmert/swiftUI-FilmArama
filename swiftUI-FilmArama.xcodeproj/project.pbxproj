@@ -14,6 +14,8 @@
 		41A5A82828D05C82008F0033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A5A82728D05C82008F0033 /* Assets.xcassets */; };
 		41A5A82B28D05C82008F0033 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A5A82A28D05C82008F0033 /* Preview Assets.xcassets */; };
 		41A5A83728D05DFB008F0033 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5A83628D05DFB008F0033 /* Film.swift */; };
+		41B22E0728D495B000F233E5 /* ImageDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B22E0628D495B000F233E5 /* ImageDownloaderClient.swift */; };
+		41B22E0B28D49A0A00F233E5 /* OzelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B22E0A28D49A0A00F233E5 /* OzelImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		41A5A82728D05C82008F0033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41A5A82A28D05C82008F0033 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41A5A83628D05DFB008F0033 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		41B22E0628D495B000F233E5 /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
+		41B22E0A28D49A0A00F233E5 /* OzelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzelImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				41489CE628D09CC6008704CB /* DownloaderClient.swift */,
+				41B22E0628D495B000F233E5 /* ImageDownloaderClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				41A5A82528D05C80008F0033 /* FilmListeView.swift */,
+				41B22E0A28D49A0A00F233E5 /* OzelImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,9 +194,11 @@
 			files = (
 				41A5A82628D05C80008F0033 /* FilmListeView.swift in Sources */,
 				41A5A83728D05DFB008F0033 /* Film.swift in Sources */,
+				41B22E0B28D49A0A00F233E5 /* OzelImage.swift in Sources */,
 				415399C228D206AD001B87A3 /* FilmViewModel.swift in Sources */,
 				41A5A82428D05C80008F0033 /* swiftUI_FilmAramaApp.swift in Sources */,
 				41489CE728D09CC6008704CB /* DownloaderClient.swift in Sources */,
+				41B22E0728D495B000F233E5 /* ImageDownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
