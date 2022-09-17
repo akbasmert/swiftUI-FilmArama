@@ -28,6 +28,26 @@ class DownloaderClient { // escaping işlemi yaptık çünkü veri çekme işlem
         }.resume()//resume demezsek bu işem başlamazzöçöcxvmlk
     }
     
+    // filmlerin detaylarını indirmek için bu fonksiyonu oluşturduk.
+    func filmDetayiniIndir(imdbId: String, completion: @escaping(Result<FilmDetay, DownLoaderError>) -> Void){
+        
+        guard let url = URL(string: "https://www.omdbapi.com/?i=\(imdbId)&apikey=f5133d7") else {
+            return completion(.failure(.yanlisUrl))// urlde hata varsa DownloadError dan yanlıs url yi verecek.
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                return completion(.failure(.veriGelmedi))
+            }
+            
+            guard let gelenfilmDetayi = try? JSONDecoder().decode(FilmDetay.self, from: data) else {
+                return completion(.failure(.veriIslenemedi))
+            }
+            completion(.success(gelenfilmDetayi))
+        }.resume()
+        
+    }
+    
     
 }
 
