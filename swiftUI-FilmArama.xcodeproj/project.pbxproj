@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4101E76A28D5E084000E24AC /* FilmDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101E76928D5E084000E24AC /* FilmDetay.swift */; };
 		41489CE728D09CC6008704CB /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41489CE628D09CC6008704CB /* DownloaderClient.swift */; };
 		415399C228D206AD001B87A3 /* FilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415399C128D206AD001B87A3 /* FilmViewModel.swift */; };
 		41A5A82428D05C80008F0033 /* swiftUI_FilmAramaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5A82328D05C80008F0033 /* swiftUI_FilmAramaApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4101E76928D5E084000E24AC /* FilmDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetay.swift; sourceTree = "<group>"; };
 		41489CE628D09CC6008704CB /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 		415399C128D206AD001B87A3 /* FilmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModel.swift; sourceTree = "<group>"; };
 		41A5A82028D05C80008F0033 /* swiftUI-FilmArama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftUI-FilmArama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				41A5A83628D05DFB008F0033 /* Film.swift */,
+				4101E76928D5E084000E24AC /* FilmDetay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A5A82628D05C80008F0033 /* FilmListeView.swift in Sources */,
+				4101E76A28D5E084000E24AC /* FilmDetay.swift in Sources */,
 				41A5A83728D05DFB008F0033 /* Film.swift in Sources */,
 				41B22E0B28D49A0A00F233E5 /* OzelImage.swift in Sources */,
 				415399C228D206AD001B87A3 /* FilmViewModel.swift in Sources */,

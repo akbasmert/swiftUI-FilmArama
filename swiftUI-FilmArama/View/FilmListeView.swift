@@ -21,7 +21,7 @@ struct FilmListeView: View {
         NavigationView{
             VStack{
             TextField("Aranacak Film ", text: $aranacakFilm) {
-                self.filmListeViewModel.filmAramasiYap(filmIsmi: aranacakFilm)
+                self.filmListeViewModel.filmAramasiYap(filmIsmi: aranacakFilm.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? aranacakFilm) // .trimmingCharacters ve devamını aramadaki boşlukları görmezden gelmek için yazdık.
             }.padding().textFieldStyle(RoundedBorderTextFieldStyle())
         List(filmListeViewModel.filmler, id: \.imdbId){
             film in HStack{
